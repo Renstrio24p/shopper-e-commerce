@@ -34842,11 +34842,12 @@ var ShopContextProvider = (props) => {
   const [cartItems, setCartItem] = (0, import_react.useState)(
   getDefaultCard());
   (0, import_react.useEffect)(() => {
-    fetch("http://localhost:5100/allofflineproduct\
-s").then((res) => res.json()).then((data) => setAll_product(
-    data));
+    fetch("https://ecommerce-backend-7fnr0mqga-ren\
+strio24p.vercel.app/allproducts").then((res) => res.
+    json()).then((data) => setAll_product(data));
     if (localStorage.getItem("auth-token")) {
-      fetch("http://localhost:5100/getcart", {
+      fetch("https://ecommerce-backend-7fnr0mqga-r\
+enstrio24p.vercel.app/getcart", {
         method: "POST",
         headers: {
           Accept: "application/form-data",
@@ -34862,7 +34863,8 @@ uth-token")}`,
   const fetchCart = (itemId, times, link) => {
     setCartItem((prev) => __spreadProps(__spreadValues(
     {}, prev), { [itemId]: prev[itemId] + times }));
-    fetch(`http://localhost:5100/${link}`, {
+    fetch(`https://ecommerce-backend-7fnr0mqga-ren\
+strio24p.vercel.app/${link}`, {
       method: "POST",
       headers: {
         Accept: "application/form-data",
