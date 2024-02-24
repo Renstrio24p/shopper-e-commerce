@@ -1,0 +1,109 @@
+:where(
+    .offers,
+    .offers-left,
+    .offers-right
+    ) {
+    display: flex;
+}
+
+.offers {
+    width: 65%;
+    height: 60vh;
+    margin: auto;
+    padding: 0px 140px;
+    margin-bottom: 150px;
+    background: linear-gradient(180deg, #aae5f4, #e1ffea22 60%);
+}
+
+.offers-left {
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.offers-left :where(h1,h2){
+    color: #171717;
+    font-weight: 600;
+}
+
+.offers-left h1 {
+    font-size: 80px;
+}
+
+.offers-left h2 {
+    font-size: 60px;
+}
+
+.offers-left p {
+    color: #171717;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.offers-left button {
+    width: 282px;
+    height: 70px;
+    border-radius: 35px;
+    background: rgb(27, 47, 47);
+    color: white;
+    font-size: 22px;
+    font-weight: 500;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+.offers-right {
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+/* Media Queries */
+
+@media screen and (max-width:1280px) {
+    .offers {
+        padding: 0 100px;
+        width: 100%;
+        margin: 0 auto;
+        height: max-content;
+    }
+
+    .offers-left h1 {
+        font-size: 50px;
+    }
+
+    .offers-left h2 {
+        font-size: 30px;
+    }
+
+    .offers-right img {
+        width: 280px;
+    }
+
+    .offers-left button {
+        width: 240px;
+        height: 50px;
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width:762px) {
+    
+    .offers {
+        padding: 0 40px;
+    }
+
+}
+
+@media screen and (max-width:563px) {
+    
+    .offers {
+        height: 60vh;
+    }
+
+    .offers-right {
+        display: none;
+    }
+
+}

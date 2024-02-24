@@ -1,0 +1,137 @@
+
+:where(
+    .shopcategory-indexSort,
+    .shopcategory-loadmore
+){
+    display: flex;
+}
+
+.shopcategory {
+    padding: 30px 40px;
+}
+
+.shopcategory-banner {
+    display: block;
+    width: 82%;
+}
+
+.shopcategory-indexSort {
+    margin: 0 170px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.shopcategory-sort {
+    padding: 10px 20px;
+    border-radius: 40px;
+    border: 1px solid #888;
+}
+
+.shopcategory-sort p span {
+    font-weight: 600;
+}
+
+.shopcategory-products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+    gap: 80px 20px;
+}
+
+.shopcategory-loadmore {
+    justify-content: center;
+    align-items: center;
+    margin: 150px auto;
+    width: 233px;
+    height: 69px;
+    border-radius: 75px;
+    background: #ededed;
+    color: #787878;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 1920px) {
+    
+    .shopcategory-products {
+        place-items: center;
+        margin: 30px auto;
+        height: fit-content;
+        padding: 40px;
+    }
+
+}
+
+@media screen and (max-width:1280px) {
+
+    .shopcategory-banner {
+        width: 100%;
+    }
+
+    .shopcategory-indexSort {
+        margin: 0 auto;
+        width: 100%;
+        padding: 10px 20px;
+    }
+
+    .shopcategory-products {
+        margin: 20px 70px;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    }
+    
+}
+
+@media screen and (max-width:800px) {
+    
+    .shopcategory-loadmore {
+        margin: 60px auto;
+        width: 150px;
+        height: 40px;
+        font-size: 13px;
+    }
+
+}
+
+@media screen and (max-width: 665px) {
+
+    .shopcategory-indexSort * {
+        font-size: 11px;
+    }
+
+    .shopcategory-products {
+        margin: 20px 40px;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); 
+        gap: 40px 10px; 
+    }
+
+    .shopcategory-sort {
+        height: 25px;
+        font-size: 11px;
+        padding: 5px;
+    }
+}
+
+@media screen {
+    
+}
+
+@media screen and (max-width:500px) {
+    
+    .shopcategory-products {
+        margin: 20px 25px;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); 
+        place-items: center;
+        height: fit-content;
+    }
+
+}
+
+@media screen and (max-width:416px) {
+    
+    .shopcategory-products {
+        display: flex;
+        flex-direction: column;
+    }
+
+}
