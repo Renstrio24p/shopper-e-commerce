@@ -9,7 +9,7 @@ export default function NewCollections({}: Props) {
   const [new_collection,setNew_collectio] = useState<Product>([])
 
   useEffect(()=>{
-    fetch('http://localhost:5100/newofflinecollection')
+    fetch('http://localhost:5100/newcollection')
     .then((res: Response) => res.json())
     .then((data: Product) => setNew_collectio(data))
   },[])

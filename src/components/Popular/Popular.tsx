@@ -9,7 +9,7 @@ export default function Popular({}: Props) {
   const [popularProducts,setPopularProducts] = useState<Product>([])
 
   useEffect(()=>{
-     fetch('http://localhost:5100/popularinofflinewomen')
+     fetch('http://localhost:5100/popularinwomen')
      .then((res: Response) => res.json())
      .then((data: Product) => setPopularProducts(data))
   },[])

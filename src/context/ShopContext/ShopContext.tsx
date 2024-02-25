@@ -25,11 +25,11 @@ const ShopContextProvider = (props: { children: ReactNode }) => {
     const [cartItems, setCartItem] = useState<CartItems>(getDefaultCard())
 
     useEffect(()=>{
-        fetch('https://ecommerce-backend-7fnr0mqga-renstrio24p.vercel.app/allproducts')
+        fetch('http://localhost:5100/allproducts')
         .then((res: Response) => res.json())
         .then((data: any) => setAll_product(data))
         if(localStorage.getItem('auth-token')){
-            fetch('https://ecommerce-backend-7fnr0mqga-renstrio24p.vercel.app/getcart',{
+            fetch('http://localhost:5100/getcart',{
                 method: 'POST',
                 headers: {
                     Accept: 'application/form-data',
@@ -45,7 +45,7 @@ const ShopContextProvider = (props: { children: ReactNode }) => {
 
     const fetchCart = (itemId: number,times: number,link: string) => {
         setCartItem(prev => ({ ...prev, [itemId]: prev[itemId] + times }))
-        fetch(`https://ecommerce-backend-7fnr0mqga-renstrio24p.vercel.app/${link}`,{
+        fetch(`http://localhost:5100/${link}`,{
                 method: 'POST',
                 headers: {
                     Accept: 'application/form-data',
