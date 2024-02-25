@@ -34842,12 +34842,11 @@ var ShopContextProvider = (props) => {
   const [cartItems, setCartItem] = (0, import_react.useState)(
   getDefaultCard());
   (0, import_react.useEffect)(() => {
-    fetch("https://ecommerce-backend-7fnr0mqga-ren\
-strio24p.vercel.app/allproducts").then((res) => res.
-    json()).then((data) => setAll_product(data));
+    fetch("http://localhost:5100/allproducts").then(
+    (res) => res.json()).then((data) => setAll_product(
+    data));
     if (localStorage.getItem("auth-token")) {
-      fetch("https://ecommerce-backend-7fnr0mqga-r\
-enstrio24p.vercel.app/getcart", {
+      fetch("http://localhost:5100/getcart", {
         method: "POST",
         headers: {
           Accept: "application/form-data",
@@ -34863,8 +34862,7 @@ uth-token")}`,
   const fetchCart = (itemId, times, link) => {
     setCartItem((prev) => __spreadProps(__spreadValues(
     {}, prev), { [itemId]: prev[itemId] + times }));
-    fetch(`https://ecommerce-backend-7fnr0mqga-ren\
-strio24p.vercel.app/${link}`, {
+    fetch(`http://localhost:5100/${link}`, {
       method: "POST",
       headers: {
         Accept: "application/form-data",
@@ -35167,8 +35165,8 @@ function NewCollections({}) {
   const [new_collection, setNew_collectio] = (0, import_react3.useState)(
   []);
   (0, import_react3.useEffect)(() => {
-    fetch("http://localhost:5100/newofflinecollect\
-ion").then((res) => res.json()).then((data) => setNew_collectio(
+    fetch("http://localhost:5100/newcollection").then(
+    (res) => res.json()).then((data) => setNew_collectio(
     data));
   }, []);
   return (0, import_jsx_runtime8.jsxs)("div", { className: "\
@@ -35236,8 +35234,8 @@ function Popular({}) {
   const [popularProducts, setPopularProducts] = (0, import_react4.useState)(
   []);
   (0, import_react4.useEffect)(() => {
-    fetch("http://localhost:5100/popularinofflinew\
-omen").then((res) => res.json()).then((data) => setPopularProducts(
+    fetch("http://localhost:5100/popularinwomen").
+    then((res) => res.json()).then((data) => setPopularProducts(
     data));
   }, []);
   return (0, import_jsx_runtime11.jsxs)("div", { className: "\
